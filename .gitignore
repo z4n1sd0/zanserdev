@@ -366,4 +366,5 @@ FodyWeavers.xsd
 env/
 
 # pyproj
-*.pyproj
+zanserdev.pyproj 
+/zanserdev.pyproj
