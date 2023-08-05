@@ -1,48 +1,32 @@
-"""
-Routes and views for the flask application.
-"""
-
 from datetime import datetime
+from email import message
 from flask import render_template, Flask
 app = Flask(__name__)
 
 @app.route('/')
 @app.route('/home')
-def home():
-    """Renders the home page."""
+def index():
     return render_template(
         'index.html',
-        title='Home Page',
+        title='Flask',
         year=datetime.now().year,
+        message='Under development...'
     )
 
 @app.route('/contact')
 def contact():
-    """Renders the contact page."""
     return render_template(
         'contact.html',
         title='Contact',
         year=datetime.now().year,
-        message='Your contact page.'
+        message='Pending...'
     )
-
-@app.route('/about')
-def about():
-    """Renders the about page."""
-    return render_template(
-        'about.html',
-        title='About',
-        year=datetime.now().year,
-        message='Your application description page.'
-    )
-
 
 @app.route('/discordbot')
 def discordbot():
-    """Renders the about page."""
     return render_template(
-        'about.html',
-        title='About',
+        'discordbot.html',
+        title='Bot',
         year=datetime.now().year,
-        message='Your application description page.'
+        message='Pending...'
     )
